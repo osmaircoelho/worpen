@@ -1,0 +1,24 @@
+body { background: #f9f9f9; }
+
+section {
+  width: 95%;
+  max-width: 1180px;
+  margin: 5% auto;
+  padding: 1.6% 0;
+  clear: both;
+  position: relative;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 2% 0;
+  border-top: 1px solid #ddd;
+}
+
+.help {
+  padding: 1% 2%;
+  font-size: .95em;
+}
+
+h1 i { margin-right: .8%; }
