@@ -36,7 +36,6 @@
               <td><strong><?php print $level_text['level']; ?></strong></td>
               <td><strong><?php print $module_text['date_create']; ?></strong></td>
               <td><strong><?php print $module_text['active']; ?></strong></td>
-              <td><strong><?php print $module_text['position']; ?></strong></td>
               <td class="text-center"><strong><?php print $module_text['edit']; ?></strong></td>
             </tr>
           </thead>

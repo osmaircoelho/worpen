@@ -22,3 +22,15 @@ footer {
 }
 
 h1 i { margin-right: .8%; }
+
+.number-notif {
+  padding: 3px 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+  background-color: #ED5565;
+  color: #FFF;
+  margin-bottom: 1px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}

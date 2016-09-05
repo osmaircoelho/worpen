@@ -8,6 +8,7 @@
     <title><?php print $INFO['namesite']; ?></title>
     <link href="<?php print $PATH['template']; ?>_files/img/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link href="<?php print $PATH['template']; ?>_files/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="<?php print $PATH['template']; ?>_files/css/anie.css" rel="stylesheet" type="text/css">
     <link href="<?php print $PATH['template']; ?>_files/css/style.css" rel="stylesheet" type="text/css">
     <?php worpen_head(); ?>
   </head>

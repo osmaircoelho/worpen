@@ -36,7 +36,6 @@ if (!$search_user) {
             <td>{$result['access_level']}</td>
             <td>{$result['date_create']}</td>
             <td>{$result['active']}</td>
-            <td>{$result['position']}</td>
             <td class=\"text-center\"><a href=\"?mod=admin&pg=view_module&id={$result['id']}\" class=\"btn btn-default\"><i class=\"fa fa-eye\"></i></a> <a href=\"?mod=admin&pg=edit_module&id={$result['id']}\" class=\"btn btn-default\"><i class=\"fa fa-pencil\"></i></a></td>
           </tr>";
   }
@@ -94,7 +93,6 @@ if (!$search_user) {
             <td>{$result['access_level']}</td>
             <td>{$result['date_create']}</td>
             <td>{$result['active']}</td>
-            <td>{$result['position']}</td>
             <td class=\"text-center\"><a href=\"?mod=admin&pg=view_module&id={$result['id']}\" class=\"btn btn-default\"><i class=\"fa fa-eye\"></i></a> <a href=\"?mod=admin&pg=edit_module&id=3\" class=\"btn btn-default\"><i class=\"fa fa-pencil\"></i></a></td>
           </tr>";
   }
