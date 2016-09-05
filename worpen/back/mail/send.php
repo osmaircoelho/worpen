@@ -2,11 +2,11 @@
 include '../info.php';
 
 $sender_Form  = $_POST['worpen_form'];
-$receiver_Name  = $_POST['receiver_Name'];
-$receiver_Email = $_POST['receiver_Email'];
+$receiver_Name  = addslashes($_POST['receiver_Name']);
+$receiver_Email = addslashes($_POST['receiver_Email']);
 $subject  = $_POST['subject'];
 $message = $_POST['message'];
-$return = "../../".$_POST['return'];
+$return = "../../".addslashes($_POST['return']);
 
 if (isset($sender_Form)) {
 
