@@ -27,12 +27,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <?php include $FOLDERS['back'].'menu.php'; ?>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php print $header_text['all']; ?> <strong class="caret"></strong></a>
-              <ul class="dropdown-menu">
-                <?php include $FOLDERS['back'].'menu_all.php'; ?>
-              </ul>
-            </li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
