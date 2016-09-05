@@ -21,14 +21,14 @@ if (!$user or !$pass) {
   # Fill variables for verification
   while ($result = $select->fetch(PDO::FETCH_ASSOC)) {
     $user_username = $result['username'];
-    $password = $result['password'];
+    $user_password = $result['password'];
     $user_fullname = $result['fullname'];
     $user_email = $result['email'];
     $access_level = $result['access_level'];
   }
 
   // Confirm
-  if ($user == $user_username && $pass == $password) {
+  if ($user == $user_username && $pass == $user_password) {
     $_SESSION['login'] = "ok";
     $_SESSION['user_username'] = $user_username;
     $_SESSION['user_fullname'] = $user_fullname;
@@ -36,9 +36,9 @@ if (!$user or !$pass) {
     $_SESSION['access_level'] = $access_level;
 
     // LOG
-    $insert = $connect->prepare("INSERT INTO worpen_log(user, date_acess, hour_access, ip) VALUES (:user, :date_acess, :hour_access, :ip)");
+    $insert = $connect->prepare("INSERT INTO worpen_log(user, date_access, hour_access, ip) VALUES (:user, :date_access, :hour_access, :ip)");
     $insert->bindParam(':user', $_SESSION['user_username']);
-    $insert->bindParam(':date_acess', $INFO['date']);
+    $insert->bindParam(':date_access', $INFO['date']);
     $insert->bindParam(':hour_access', $INFO['hour']);
     $insert->bindParam(':ip', $INFO['ip']);
     $insert->execute();

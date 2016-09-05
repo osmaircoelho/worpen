@@ -1,5 +1,6 @@
 <?php
 include "config.php";
+include "back/valid.php";
 
 // Path module
 if (!$_GET['mod']) { $MODULE_GET = $PATH['modstart']; } else { $MODULE_GET = addslashes($_GET['mod']); }

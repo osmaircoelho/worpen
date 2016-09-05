@@ -1,11 +1,11 @@
 <?php
 
 function worpen_head() {
-  print "<link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\">";
+  // print "<link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\">";
 }
 
 function worpen_logo() {
-  print "<i class=\"fa fa-home\"></i>";
+  print "<span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>";
 }
 
 function worpen_footer() {

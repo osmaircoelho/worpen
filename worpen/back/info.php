@@ -12,7 +12,7 @@ $INFO_MAIL = array(
   "server" => "smtp.site.com",
   "port" => "587",
   "user" => "user@site.com",
-  "password" => "password",
+  "password" => "password"
 );
 
 // Access information

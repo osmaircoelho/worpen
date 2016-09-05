@@ -39,7 +39,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['user_username']; ?> <strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <?php
-                  if ($_SESSION['access_level'] != 1) {
+                  if ($_SESSION['access_level'] == 1) {
                     echo "<li><a href=\"?mod=admin\">{$header_text['admin']}</a></li>";
                   }
                 ?>
@@ -47,6 +47,9 @@
               </ul>
             </li>
           </ul>
+
+          <?php include $FOLDERS['back'].'notifications.php'; ?>
+
         </div>
 
       </div>
