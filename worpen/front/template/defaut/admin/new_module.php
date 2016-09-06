@@ -3,11 +3,11 @@
   <div class="row">
 
     <div class="col-md-2">
-      <ul class="nav nav-pills nav-stacked">
-        <li role="presentation"><a href="?mod=admin"><?php print $admin_text['users']; ?></a></li>
-        <li role="presentation"><a href="?mod=admin&pg=log"><?php print $admin_text['records']; ?></a></li>
-        <li role="presentation" class="active"><a href="?mod=admin&pg=modules"><?php print $admin_text['modules']; ?></a></li>
-      </ul>
+      <br>
+      <a href="?mod=admin" class="btn btn-block btn-transparent"><?php print $admin_text['users']; ?></a>
+      <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?php print $admin_text['records']; ?></a>
+      <a href="?mod=admin&pg=modules" class="btn btn-block btn-blue-3"><?php print $admin_text['modules']; ?></a>
+      <a href="?mod=admin&pg=info" class="btn btn-block btn-transparent"><?php print $admin_text['info']; ?></a>
     </div>
 
     <div class="col-md-10">
@@ -18,7 +18,7 @@
         </div>
         <div class="col-md-4">
           <br>
-          <p class="text-right"><a href="?mod=admin?pg=modules" class="btn btn-warning"><i class="fa fa-arrow-circle-o-left"></i> &nbsp; <?php print $admin_text['back']; ?></a></p>
+          <p class="text-right"><a href="?mod=admin" class="btn btn-warning"><i class="fa fa-arrow-circle-o-left"></i> &nbsp; <?php print $admin_text['back']; ?></a></p>
         </div>
       </div>
 
@@ -37,13 +37,8 @@
         </div>
 
         <div class="form-group">
-          <label for="name_menu"><?php print $module_text['name_menu']; ?></label>
-          <input type="text" class="form-control" id="name_menu" name="name_menu" placeholder="<?php print $module_text['name_menu']; ?>" required>
-        </div>
-
-        <div class="form-group">
           <label for="level"><?php print $level_text['level']; ?></label>
-          <select class="form-control" id="level" name="level">
+          <select class="form-control" name="level">
             <option value="1">1 - <?php print $level_text['administrator']; ?></option>
             <option value="2">2 - <?php print $level_text['manager']; ?></option>
             <option value="3">3 - <?php print $level_text['moderator']; ?></option>
@@ -51,17 +46,9 @@
           </select>
         </div>
 
-        <div class="form-group">
-          <label for="active"><?php print $module_text['active']; ?></label>
-          <select class="form-control" id="active" name="active">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-
         <br>
 
-        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> &nbsp; <?php print $admin_text['save']; ?></button>
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-disk" aria-hidden="true"></span> &nbsp; <?php print $admin_text['save']; ?></button>
 
       </form>
 

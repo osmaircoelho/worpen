@@ -2,7 +2,7 @@
 
 // Basic page information
 $INFO = array(
-  "namesite" => "Worpen",
+  "sitename" => "Worpen",
   "template" => "defaut",
   "language" => "en",
   "modstart" => "home"

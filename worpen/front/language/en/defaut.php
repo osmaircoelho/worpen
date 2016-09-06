@@ -7,3 +7,9 @@ $header_text = array(
   "settings" => "Settings",
   "logoff" => "Logoff"
 );
+
+$search_text = array(
+  "noresult" => "No results found!",
+  "oneresult" => "1 result found!",
+  "results" => "results found!"
+);

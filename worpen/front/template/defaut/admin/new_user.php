@@ -3,11 +3,11 @@
   <div class="row">
 
     <div class="col-md-2">
-      <ul class="nav nav-pills nav-stacked">
-        <li role="presentation" class="active"><a href="?mod=admin"><?php print $admin_text['users']; ?></a></li>
-        <li role="presentation"><a href="?mod=admin&pg=log"><?php print $admin_text['records']; ?></a></li>
-        <li role="presentation"><a href="?mod=admin&pg=modules"><?php print $admin_text['modules']; ?></a></li>
-      </ul>
+      <br>
+      <a href="?mod=admin" class="btn btn-block btn-blue-3"><?php print $admin_text['users']; ?></a>
+      <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?php print $admin_text['records']; ?></a>
+      <a href="?mod=admin&pg=modules" class="btn btn-block btn-transparent"><?php print $admin_text['modules']; ?></a>
+      <a href="?mod=admin&pg=info" class="btn btn-block btn-transparent"><?php print $admin_text['info']; ?></a>
     </div>
 
     <div class="col-md-10">
@@ -63,7 +63,7 @@
 
         <br>
 
-        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> &nbsp; <?php print $admin_text['save']; ?></button>
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-disk" aria-hidden="true"></span> &nbsp; <?php print $admin_text['save']; ?></button>
 
       </form>
 

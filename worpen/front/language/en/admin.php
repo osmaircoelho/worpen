@@ -2,9 +2,11 @@
 $admin_text = array(
   "save" => "Save",
   "back" => "Go back",
-  "users" => "All users",
+  "users" => "Users",
   "records" => "Log",
-  "modules" => "Modules"
+  "modules" => "Modules",
+  "info" => "Details",
+  "edit" => "Edit"
 );
 
 /* --------- */
@@ -22,16 +24,15 @@ $level_text = array(
 $users_text = array(
   "title" => "Users",
   "new" => "New User",
-  // "input_search" => "Search for Username or Full Name",
-  // "button_search" => "Search",
+  "input_search" => "Search for Full Name or Username",
+  "button_search" => "Search",
   "id" => "ID",
   "fullname" => "Full Name",
   "username" => "Username",
   "email" => "Email address",
   "password" => "Password",
   "confirmpassword" => "Confirm Password",
-  "date_create" => "Register",
-  "edit" => "Edit"
+  "date_create" => "Register"
 );
 
 $new_users_text = array(
@@ -43,15 +44,13 @@ $new_users_text = array(
 $module_text = array(
   "title" => "Modules",
   "new" => "New Module",
-  // "input_search" => "Search for Name Module or Menu Name",
-  // "button_search" => "Search",
+  "input_search" => "Search for Name Module or Date Create",
+  "button_search" => "Search",
   "id" => "ID",
   "name" => "Name Module",
-  "name_menu" => "Menu Module",
   "url" => "URL",
-  "date_create" => "Data Create",
-  "active" => "Active",
-  "edit" => "Edit"
+  "date_create" => "Date Create",
+  "active" => "Active"
 );
 
 $new_module_text = array(
@@ -63,10 +62,20 @@ $new_module_text = array(
 $log_text = array(
   "title" => "Log",
   "del" => "Clear Records",
-  // "input_search" => "Search for Date or Username",
-  // "button_search" => "Search",
+  "input_search" => "Search for Username or Date",
+  "button_search" => "Search",
   "id" => "ID",
   "username" => "Username",
   "date" => "Date",
   "ip" => "IP"
+);
+
+/* --------- */
+
+$info_text = array(
+  "title" => "Site details",
+  "sitename" => "Site Name",
+  "template" => "Template",
+  "language" => "Language",
+  "modstart" => "Module Home"
 );

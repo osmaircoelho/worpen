@@ -532,6 +532,18 @@ button[data-tooltip] { overflow: visible; }
 .gradient-effect { background-image: linear-gradient(to bottom, rgba(212,212,212,.4), transparent); }
 .gradient-effect:hover { background-image: linear-gradient(to top, rgba(212,212,212,.4), transparent); }
 
+/* transparent */
+.transparent, .transparent-hover:hover, .transparent-focus:focus { background-color: transparent; color: #333; }
+.text-transparent, .text-transparent-hover:hover, .text-transparent-focus:focus { color: transparent !important; }
+.bord-transparent, .bord-transparent-hover:hover, .bord-transparent-focus:focus { border-color: transparent; }
+.btn-transparent, .btn-transparent-hover:hover { background-color: transparent; border-color: transparent; color: #333; }
+.btn-transparent .badge { color: transparent; background-color: #333; }
+.btn-transparent:hover,
+.btn-transparent:focus,
+.btn-transparent.focus,
+.btn-transparent.active { background-color: transparent; border-color: transparent; color: #333; }
+.btn-transparent.btn-anie-2 { background: transparent; color: transparent; border-color: transparent; }
+
 /* White */
 .white, .white-hover:hover, .white-focus:focus { background-color: #FFFFFF; color: #333; }
 .text-white, .text-white-hover:hover, .text-white-focus:focus { color: #FFFFFF !important; }

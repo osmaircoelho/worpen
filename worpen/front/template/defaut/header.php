@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="Resource-type" content="document">
-    <title><?php print $INFO['namesite']; ?></title>
+    <title><?php print $INFO['sitename']; ?></title>
     <link href="<?php print $PATH['template']; ?>_files/img/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link href="<?php print $PATH['template']; ?>_files/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="<?php print $PATH['template']; ?>_files/css/anie.css" rel="stylesheet" type="text/css">
@@ -21,7 +21,7 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
              <span class="sr-only">Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php" title="<?php echo $INFO['namesite']; ?>"><?php worpen_logo(); ?></a>
+          <a class="navbar-brand" href="index.php" title="<?php echo $INFO['sitename']; ?>"><?php worpen_logo(); ?></a>
         </div>
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -34,11 +34,10 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['user_username']; ?> <strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <?php
-                  if ($_SESSION['access_level'] == 1) {
-                    echo "<li><a href=\"?mod=admin\">{$header_text['admin']}</a></li>";
-                  }
+                  if ($_SESSION['access_level'] == 1) { echo "<li><a href=\"?mod=admin\">{$header_text['admin']}</a></li>"; }
                 ?>
-                <li><a href="logoff.php"><?php print $header_text['logoff']; ?></a></li>
+                <!-- <li><a href=\"logoff.php\"><?php echo $header_text['settings']; ?></a></li> -->
+                <li><a href=\"logoff.php\"><?php echo $header_text['logoff']; ?></a></li>
               </ul>
             </li>
           </ul>
