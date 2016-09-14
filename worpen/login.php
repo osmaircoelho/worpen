@@ -27,6 +27,7 @@ if (isset($_SESSION['login'])) { header("Location: index.php"); }
       <form method="post" action="back/login.php">
         <div><input type="text" name="user" placeholder="User" autofocus required></div>
         <div><input type="password" name="pass" placeholder="Password" required></div>
+        <input type="hidden" name="plataform" value="1">
         <?php
           $message = htmlspecialchars($_GET['m']);
           switch ($message) {

@@ -1,7 +1,8 @@
 <?php
 
-$select_menu_menu = $connect->prepare("SELECT * FROM worpen_menu WHERE active LIKE :active");
+$select_menu_menu = $connect->prepare("SELECT * FROM worpen_menu WHERE active LIKE :active AND plataform LIKE :plataform");
 $select_menu_menu->bindValue(":active", "yes");
+$select_menu_menu->bindValue(':plataform', $_SESSION['user_plataform']);
 $select_menu_menu->execute();
 
 while ($result = $select_menu_menu->fetch(PDO::FETCH_ASSOC)) {
@@ -16,8 +17,9 @@ while ($result = $select_menu_menu->fetch(PDO::FETCH_ASSOC)) {
   if ($result['show'] == "no") { $show_all = "ok"; }
 }
 
-$select_menu_menu_all = $connect->prepare("SELECT * FROM worpen_menu WHERE active LIKE :active");
+$select_menu_menu_all = $connect->prepare("SELECT * FROM worpen_menu WHERE active LIKE :active AND plataform LIKE :plataform");
 $select_menu_menu_all->bindValue(":active", "yes");
+$select_menu_menu_all->bindValue(':plataform', $_SESSION['user_plataform']);
 $select_menu_menu_all->execute();
 
 if ($show_all == "ok") {

@@ -26,7 +26,8 @@ $level_text = array(
 
 $users_text = array(
   "title" => "Users",
-  "title_new" => "New Users",
+  "title_new" => "New User",
+  "title_edit" => "Edit User",
   "new" => "<span class=\"glyphicon glyphicon-plus\"></span> &nbsp; New User",
   "input_search" => "Search for Full Name or Username",
   "button_search" => "Search",
@@ -36,8 +37,12 @@ $users_text = array(
   "email" => "Email address",
   "password" => "Password",
   "confirmpassword" => "Confirm Password",
+  "current_password" => "Current Password",
   "new_password" => "New Password",
   "confirm_new_password" => "Confirm New Password",
+  "info_new_password" => "Fill in the fields below only if changing the current password.",
+  "user_updated" => "User updated successfully!",
+  "user_updated_error" => "An error occurred, check the data!",
   "date_create" => "Register"
 );
 
@@ -46,6 +51,7 @@ $users_text = array(
 $module_text = array(
   "title" => "Modules",
   "title_new" => "New Module",
+  "title_edit" => "Edit Module",
   "new" => "<span class=\"glyphicon glyphicon-plus\"></span> &nbsp; New Module",
   "input_search" => "Search for Name Module or Date Create",
   "button_search" => "Search",
@@ -63,6 +69,7 @@ $module_text = array(
 $menus_text = array(
   "title" => "Menus",
   "title_new" => "New Menu",
+  "title_edit" => "Edit Menu",
   "new" => "<span class=\"glyphicon glyphicon-plus\"></span> &nbsp; New Menu",
   "input_search" => "Search for Name Menu or URL",
   "button_search" => "Search",

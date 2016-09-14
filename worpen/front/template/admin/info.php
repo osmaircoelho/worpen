@@ -29,11 +29,6 @@
         </div>
 
         <div class="form-group">
-          <label for="template"><?= $info_text['template']; ?></label>
-          <input type="text" class="form-control" id="template" name="template" value="<?= $INFO['template']; ?>" required>
-        </div>
-
-        <div class="form-group">
           <label for="language"><?= $info_text['language']; ?></label>
           <input type="text" class="form-control" id="language" name="language" value="<?= $INFO['language']; ?>" required>
         </div>
@@ -62,7 +57,7 @@
 
         <div class="form-group">
           <label for="password_mail"><?= $info_text['password_mail']; ?></label>
-          <input type="text" class="form-control" id="password_mail" name="password_mail" value="<?= $INFO_MAIL['password']; ?>" required>
+          <input type="password" class="form-control" id="password_mail" name="password_mail" value="<?= $INFO_MAIL['password']; ?>" required>
         </div>
 
         <button type="submit" class="btn btn-success"><?= $admin_text['save']; ?></button>

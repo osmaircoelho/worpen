@@ -1,13 +1,15 @@
 <?php
 
-$select_menu_notif = $connect->prepare("SELECT * FROM worpen_notification WHERE active LIKE :active AND user LIKE :user ORDER BY id DESC");
+$select_menu_notif = $connect->prepare("SELECT * FROM worpen_notification WHERE active LIKE :active AND user LIKE :user AND plataform LIKE :plataform ORDER BY id DESC");
 $select_menu_notif->bindValue(":active", "yes");
 $select_menu_notif->bindValue(":user", $_SESSION['user_username']);
+$select_menu_notif->bindValue(':plataform', $_SESSION['user_plataform']);
 $select_menu_notif->execute();
 
-$select_menu_notif_count = $connect->prepare("SELECT COUNT(*) FROM worpen_notification WHERE active LIKE :active AND user LIKE :user");
+$select_menu_notif_count = $connect->prepare("SELECT COUNT(*) FROM worpen_notification WHERE active LIKE :active AND user LIKE :user AND plataform LIKE :plataform");
 $select_menu_notif_count->bindValue(":active", "yes");
 $select_menu_notif_count->bindValue(":user", $_SESSION['user_username']);
+$select_menu_notif_count->bindValue(':plataform', $_SESSION['user_plataform']);
 $select_menu_notif_count->execute();
 $count_results = $select_menu_notif_count->fetchColumn();
 

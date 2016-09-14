@@ -10,8 +10,9 @@ $current_page_calc = $current_page - 1;
 $number_result_page = $current_page_calc * $results_for_page;
 
 # Count Results
-$select_db_count = $connect->prepare("SELECT COUNT(*) FROM worpen_users WHERE fullname LIKE :search OR username LIKE :search OR date_create LIKE :search");
+$select_db_count = $connect->prepare("SELECT COUNT(*) FROM worpen_users WHERE fullname LIKE :search OR username LIKE :search OR date_create LIKE :search AND plataform LIKE :plataform");
 $select_db_count->bindValue(':search', "%{$search_user}%");
+$select_db_count->bindValue(':plataform', $_SESSION['user_plataform']);
 $select_db_count->execute();
 $count_results = $select_db_count->fetchColumn();
 
@@ -23,8 +24,9 @@ if ($count_results == 1) {
 }
 
 # Search the Database
-$select_db = $connect->prepare("SELECT * FROM worpen_users WHERE fullname LIKE :search OR username LIKE :search OR date_create LIKE :search ORDER BY id LIMIT {$number_result_page}, {$results_for_page}");
+$select_db = $connect->prepare("SELECT * FROM worpen_users WHERE fullname LIKE :search OR username LIKE :search OR date_create LIKE :search AND plataform LIKE :plataform ORDER BY id LIMIT {$number_result_page}, {$results_for_page}");
 $select_db->bindValue(':search', "%{$search_user}%");
+$select_db->bindValue(':plataform', $_SESSION['user_plataform']);
 $select_db->execute();
 
 # Displays the results

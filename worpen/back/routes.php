@@ -5,7 +5,7 @@ $FOLDERS['language'] = "front/language/";
 $FOLDERS['template'] = "front/template/";
 
 // Path
-$PATH['template'] = $FOLDERS['template'].$INFO['template']."/";
+$PATH['template'] = $FOLDERS['template']."/";
 $PATH['language'] = $FOLDERS['language'].$INFO['language']."/";
 $PATH['modstart'] = $INFO['modstart'];
 $PATH['error'] = $PATH['template']."error.php";
