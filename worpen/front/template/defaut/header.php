@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="Resource-type" content="document">
-    <title><?php print $INFO['sitename']; ?></title>
-    <link href="<?php print $PATH['template']; ?>_files/img/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="<?php print $PATH['template']; ?>_files/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="<?php print $PATH['template']; ?>_files/css/anie.css" rel="stylesheet" type="text/css">
-    <link href="<?php print $PATH['template']; ?>_files/css/style.css" rel="stylesheet" type="text/css">
+    <title><?= $INFO['sitename']; ?></title>
+    <link href="<?= $PATH['template']; ?>_files/img/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="<?= $PATH['template']; ?>_files/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="<?= $PATH['template']; ?>_files/css/anie.css" rel="stylesheet" type="text/css">
+    <link href="<?= $PATH['template']; ?>_files/css/style.css" rel="stylesheet" type="text/css">
     <?php worpen_head(); ?>
   </head>
   <body>
@@ -37,7 +37,7 @@
                   if ($_SESSION['access_level'] == 1) { echo "<li><a href=\"?mod=admin\">{$header_text['admin']}</a></li>"; }
                 ?>
                 <!-- <li><a href=\"logoff.php\"><?php echo $header_text['settings']; ?></a></li> -->
-                <li><a href=\"logoff.php\"><?php echo $header_text['logoff']; ?></a></li>
+                <li><a href="logoff.php"><?php echo $header_text['logoff']; ?></a></li>
               </ul>
             </li>
           </ul>

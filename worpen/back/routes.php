@@ -1,5 +1,4 @@
 <?php
-
 // Folders
 $FOLDERS['back'] = "back/";
 $FOLDERS['language'] = "front/language/";

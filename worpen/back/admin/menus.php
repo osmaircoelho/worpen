@@ -10,7 +10,7 @@ $current_page_calc = $current_page - 1;
 $number_result_page = $current_page_calc * $results_for_page;
 
 # Count Results
-$select_db_count = $connect->prepare("SELECT COUNT(*) FROM worpen_users WHERE fullname LIKE :search OR username LIKE :search OR date_create LIKE :search");
+$select_db_count = $connect->prepare("SELECT COUNT(*) FROM worpen_menu WHERE name_menu LIKE :search OR url LIKE :search");
 $select_db_count->bindValue(':search', "%{$search_user}%");
 $select_db_count->execute();
 $count_results = $select_db_count->fetchColumn();
@@ -23,7 +23,7 @@ if ($count_results == 1) {
 }
 
 # Search the Database
-$select_db = $connect->prepare("SELECT * FROM worpen_users WHERE fullname LIKE :search OR username LIKE :search OR date_create LIKE :search ORDER BY id LIMIT {$number_result_page}, {$results_for_page}");
+$select_db = $connect->prepare("SELECT * FROM worpen_menu WHERE name_menu LIKE :search OR url LIKE :search ORDER BY id LIMIT {$number_result_page}, {$results_for_page}");
 $select_db->bindValue(':search', "%{$search_user}%");
 $select_db->execute();
 
@@ -31,12 +31,14 @@ $select_db->execute();
 while ($result = $select_db->fetch(PDO::FETCH_ASSOC)) {
   echo "<tr>
           <td>{$result['id']}</td>
-          <td>{$result['fullname']}</td>
-          <td>{$result['username']}</td>
+          <td>{$result['name_menu']}</td>
+          <td>{$result['url']}</td>
           <td>{$result['access_level']}</td>
-          <td>{$result['date_create']}</td>
+          <td>{$result['show']}</td>
+          <td>{$result['badge']}</td>
+          <td>{$result['active']}</td>
           <td class=\"text-center\">
-            <a href=\"?mod=admin&pg=edit_user&id={$result['id']}\" class=\"btn btn-default\"><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a>
+            <a href=\"?mod=admin&pg=edit_menu&id={$result['id']}\" class=\"btn btn-default\"><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a>
           </td>
         </tr>";
 }

@@ -1,59 +1,40 @@
-<section>
+<script type="text/javascript">
+$('#new').on('shown.bs.modal', function () {
+  $('#newbtn').focus()
+})
+</script>
 
-  <div class="row">
+<!-- Modal -->
+<div class="modal fade" id="new" tabindex="-1" role="dialog" aria-labelledby="newLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
 
-    <div class="col-md-2">
-      <br>
-      <a href="?mod=admin" class="btn btn-block btn-transparent"><?php print $admin_text['users']; ?></a>
-      <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?php print $admin_text['records']; ?></a>
-      <a href="?mod=admin&pg=modules" class="btn btn-block btn-blue-3"><?php print $admin_text['modules']; ?></a>
-      <a href="?mod=admin&pg=info" class="btn btn-block btn-transparent"><?php print $admin_text['info']; ?></a>
-    </div>
+      <form method="post" action="<?= $PATH['module']; ?>new_module.php">
 
-    <div class="col-md-10">
-
-      <div class="row">
-        <div class="col-md-8">
-          <h2><?php print $new_module_text['title']; ?></h2>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="newLabel"><?= $module_text['title_new']; ?></h4>
         </div>
-        <div class="col-md-4">
+
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="name"><?= $module_text['name']; ?></label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="<?= $module_text['name']; ?>" required>
+          </div>
+          <p><small><?= $module_text['instructions']; ?></small></p>
+
           <br>
-          <p class="text-right"><a href="?mod=admin" class="btn btn-warning"><i class="fa fa-arrow-circle-o-left"></i> &nbsp; <?php print $admin_text['back']; ?></a></p>
-        </div>
-      </div>
 
-      <br>
-
-      <form method="post" action="<?php print $PATH['module']; ?>new_user.php">
-
-        <div class="form-group">
-          <label for="name"><?php print $module_text['name']; ?></label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="<?php print $module_text['name']; ?>" required>
         </div>
 
-        <div class="form-group">
-          <label for="url"><?php print $module_text['url']; ?></label>
-          <input type="text" class="form-control" id="url" name="url" placeholder="<?php print $module_text['url']; ?>" required>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><?= $admin_text['cancel']; ?></button>
+          <button type="submit" class="btn btn-success"><?= $admin_text['save']; ?></button>
         </div>
-
-        <div class="form-group">
-          <label for="level"><?php print $level_text['level']; ?></label>
-          <select class="form-control" name="level">
-            <option value="1">1 - <?php print $level_text['administrator']; ?></option>
-            <option value="2">2 - <?php print $level_text['manager']; ?></option>
-            <option value="3">3 - <?php print $level_text['moderator']; ?></option>
-            <option value="4" selected>4 - <?php print $level_text['user']; ?></option>
-          </select>
-        </div>
-
-        <br>
-
-        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-disk" aria-hidden="true"></span> &nbsp; <?php print $admin_text['save']; ?></button>
 
       </form>
 
     </div>
-
   </div>
-
-</section>
+</div>

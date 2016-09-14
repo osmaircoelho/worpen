@@ -1,3 +1,7 @@
+<?php
+// Validation
+if (isset($_SESSION['login'])) { header("Location: index.php"); }
+?>
 <!DOCTYPE HTML>
 <html>
   <head>

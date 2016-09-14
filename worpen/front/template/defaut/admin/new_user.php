@@ -1,74 +1,69 @@
-<section>
+<script type="text/javascript">
+$('#new').on('shown.bs.modal', function () {
+  $('#newbtn').focus()
+})
+</script>
 
-  <div class="row">
+<!-- Modal -->
+<div class="modal fade" id="new" tabindex="-1" role="dialog" aria-labelledby="newLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
 
-    <div class="col-md-2">
-      <br>
-      <a href="?mod=admin" class="btn btn-block btn-blue-3"><?php print $admin_text['users']; ?></a>
-      <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?php print $admin_text['records']; ?></a>
-      <a href="?mod=admin&pg=modules" class="btn btn-block btn-transparent"><?php print $admin_text['modules']; ?></a>
-      <a href="?mod=admin&pg=info" class="btn btn-block btn-transparent"><?php print $admin_text['info']; ?></a>
-    </div>
+      <form method="post" action="<?= $PATH['module']; ?>new_user.php">
 
-    <div class="col-md-10">
-
-      <div class="row">
-        <div class="col-md-8">
-          <h2><?php print $new_users_text['title']; ?></h2>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="newLabel"><?= $users_text['title_new']; ?></h4>
         </div>
-        <div class="col-md-4">
+
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="fullname"><?= $users_text['fullname']; ?></label>
+            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="<?= $users_text['fullname']; ?>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email"><?= $users_text['email']; ?></label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="<?= $users_text['email']; ?>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="username"><?= $users_text['username']; ?></label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="<?= $users_text['username']; ?>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password"><?= $users_text['password']; ?></label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="<?= $users_text['password']; ?>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmpassword"><?= $users_text['confirmpassword']; ?></label>
+            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="<?= $users_text['confirmpassword']; ?>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="level"><?= $level_text['level']; ?></label>
+            <select class="form-control" name="level">
+              <option value="1">1 - <?= $level_text['administrator']; ?></option>
+              <option value="2">2 - <?= $level_text['manager']; ?></option>
+              <option value="3">3 - <?= $level_text['moderator']; ?></option>
+              <option value="4" selected>4 - <?= $level_text['user']; ?></option>
+            </select>
+          </div>
+
           <br>
-          <p class="text-right"><a href="?mod=admin" class="btn btn-warning"><i class="fa fa-arrow-circle-o-left"></i> &nbsp; <?php print $admin_text['back']; ?></a></p>
-        </div>
-      </div>
 
-      <br>
-
-      <form method="post" action="<?php print $PATH['module']; ?>new_user.php">
-
-        <div class="form-group">
-          <label for="fullname"><?php print $users_text['fullname']; ?></label>
-          <input type="text" class="form-control" id="fullname" name="fullname" placeholder="<?php print $users_text['fullname']; ?>" required>
         </div>
 
-        <div class="form-group">
-          <label for="email"><?php print $users_text['email']; ?></label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="<?php print $users_text['email']; ?>" required>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><?= $admin_text['cancel']; ?></button>
+          <button type="submit" class="btn btn-success"><?= $admin_text['save']; ?></button>
         </div>
-
-        <div class="form-group">
-          <label for="username"><?php print $users_text['username']; ?></label>
-          <input type="text" class="form-control" id="username" name="username" placeholder="<?php print $users_text['username']; ?>" required>
-        </div>
-
-        <div class="form-group">
-          <label for="password"><?php print $users_text['password']; ?></label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="<?php print $users_text['password']; ?>" required>
-        </div>
-
-        <div class="form-group">
-          <label for="confirmpassword"><?php print $users_text['confirmpassword']; ?></label>
-          <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="<?php print $users_text['confirmpassword']; ?>" required>
-        </div>
-
-        <div class="form-group">
-          <label for="level"><?php print $level_text['level']; ?></label>
-          <select class="form-control" name="level">
-            <option value="1">1 - <?php print $level_text['administrator']; ?></option>
-            <option value="2">2 - <?php print $level_text['manager']; ?></option>
-            <option value="3">3 - <?php print $level_text['moderator']; ?></option>
-            <option value="4" selected>4 - <?php print $level_text['user']; ?></option>
-          </select>
-        </div>
-
-        <br>
-
-        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-disk" aria-hidden="true"></span> &nbsp; <?php print $admin_text['save']; ?></button>
 
       </form>
 
     </div>
-
   </div>
-
-</section>
+</div>

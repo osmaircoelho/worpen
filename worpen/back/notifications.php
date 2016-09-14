@@ -23,13 +23,13 @@ print "<ul class=\"nav navbar-nav navbar-right\">
             <ul class=\"dropdown-menu\">";
 
             if ($count_results == 0) {
-              print "<li>{$header_text['no_notif']}</li>";
+              print "<li class=\"text-center\">{$header_text['no_notif']}</li>";
             }
             while ($result = $select_menu_notif->fetch(PDO::FETCH_ASSOC)) {
               if ($result['blank'] == "yes") {
                 $target_notif = " target=\"_blank\"";
               }
-              print "<li><a href=\"back/notifications/index.php?id={$result['id']}\" {$target_notif}>{$result['name']}</a></li>";
+              print "<li><a href=\"back/notifications_url.php?id={$result['id']}\" {$target_notif}>{$result['name']}</a></li>";
             }
 
 print "</ul>

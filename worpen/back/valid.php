@@ -1,5 +1,8 @@
 <?php
 
+// Validation
+if (!$_SESSION['login']) { header("Location: login.php"); }
+
 $select_menu_valid = $connect->prepare("SELECT * FROM worpen_module WHERE url LIKE :url");
 $select_menu_valid->bindValue(":url", $MODULE_GET);
 $select_menu_valid->execute();
