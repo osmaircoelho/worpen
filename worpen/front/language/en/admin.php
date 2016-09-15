@@ -9,7 +9,8 @@ $admin_text = array(
   "modules" => "Modules",
   "menus" => "Menus",
   "info" => "Details",
-  "edit" => "Edit"
+  "edit" => "Edit",
+  "selected" => "[Selected]"
 );
 
 /* --------- */
@@ -43,6 +44,7 @@ $users_text = array(
   "info_new_password" => "Fill in the fields below only if changing the current password.",
   "user_updated" => "User updated successfully!",
   "user_updated_error" => "An error occurred, check the data!",
+  "user_updated_pass_error" => "The password fields do not match.",
   "date_create" => "Register"
 );
 

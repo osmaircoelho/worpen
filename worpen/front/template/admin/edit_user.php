@@ -6,27 +6,27 @@
 
     <div class="col-md-2">
       <br>
-      <a href="?mod=admin" class="btn btn-block btn-blue-3"><?php print $admin_text['users']; ?></a>
-      <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?php print $admin_text['records']; ?></a>
-      <a href="?mod=admin&pg=modules" class="btn btn-block btn-transparent"><?php print $admin_text['modules']; ?></a>
-      <a href="?mod=admin&pg=info" class="btn btn-block btn-transparent"><?php print $admin_text['info']; ?></a>
+      <a href="?mod=admin" class="btn btn-block btn-blue-3"><?= $admin_text['users']; ?></a>
+      <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?= $admin_text['records']; ?></a>
+      <a href="?mod=admin&pg=modules" class="btn btn-block btn-transparent"><?= $admin_text['modules']; ?></a>
+      <a href="?mod=admin&pg=info" class="btn btn-block btn-transparent"><?= $admin_text['info']; ?></a>
     </div>
 
     <div class="col-md-10">
 
       <div class="row">
         <div class="col-md-8">
-          <h2><?php print $users_text['title_edit']; ?></h2>
+          <h2><?= $users_text['title_edit']; ?></h2>
         </div>
         <div class="col-md-4">
           <br>
-          <p class="text-right"><a href="?mod=admin" class="btn btn-warning"><i class="fa fa-arrow-circle-o-left"></i> &nbsp; <?php print $admin_text['back']; ?></a></p>
+          <p class="text-right"><a href="?mod=admin" class="btn btn-warning"><i class="fa fa-arrow-circle-o-left"></i> &nbsp; <?= $admin_text['back']; ?></a></p>
         </div>
       </div>
 
       <br>
 
-      <form method="post" action="<?php print $PATH['module']; ?>edit_user.php">
+      <form method="post" action="<?= $PATH['module']; ?>edit_user.php">
 
         <div class="form-group">
           <label for="fullname"><?= $users_text['fullname']; ?></label>
@@ -46,12 +46,26 @@
         <div class="form-group">
           <label for="level"><?= $level_text['level']; ?></label>
           <select class="form-control" name="level">
-            <option value="<?= $edit_user_db['access_level']; ?>" selected><?= $edit_user_db['access_level']; ?></option>
+            <option value="<?= $edit_user_db['access_level']; ?>" selected><?= $edit_user_db['access_level']; ?> - <?= $admin_text['selected']; ?></option>
             <option value="1">1 - <?= $level_text['administrator']; ?></option>
             <option value="2">2 - <?= $level_text['manager']; ?></option>
             <option value="3">3 - <?= $level_text['moderator']; ?></option>
             <option value="4">4 - <?= $level_text['user']; ?></option>
           </select>
+        </div>
+
+        <hr>
+
+        <p><small><?= $users_text['info_new_password']; ?></small></p>
+        
+        <div class="form-group">
+          <label for="new_password"><?= $users_text['new_password']; ?></label>
+          <input type="password" class="form-control" id="new_password" name="new_password" placeholder="<?= $users_text['new_password']; ?>">
+        </div>
+
+        <div class="form-group">
+          <label for="confirm_new_password"><?= $users_text['confirm_new_password']; ?></label>
+          <input type="password" class="form-control" id="confirm_new_password" name="confirm_new_password" placeholder="<?= $users_text['confirm_new_password']; ?>">
         </div>
 
         <input type="hidden" name="id" value="<?= $id; ?>">
@@ -67,35 +81,17 @@
               echo "<p class=\"text-red-3\">{$users_text['user_updated_error']}</p>";
               break;
             
+            case 'pass_error':
+              echo "<p class=\"text-red-3\">{$users_text['user_updated_pass_error']}</p>";
+              break;
+            
             default:
               echo "<br>";
               break;
           }
         ?>
 
-        <button type="submit" class="btn btn-success"><?php print $admin_text['save']; ?></button>
-
-      </form>
-
-      <br><hr>
-
-      <form method="post" action="<?php print $PATH['module']; ?>edit_password_user.php">
-
-        <p><small><?= $users_text['info_new_password']; ?></small></p>
-        
-        <div class="form-group">
-          <label for="new_password"><?= $users_text['new_password']; ?></label>
-          <input type="password" class="form-control" id="new_password" name="new_password" placeholder="<?= $users_text['new_password']; ?>" required>
-        </div>
-
-        <div class="form-group">
-          <label for="confirm_new_password"><?= $users_text['confirm_new_password']; ?></label>
-          <input type="password" class="form-control" id="confirm_new_password" name="confirm_new_password" placeholder="<?= $users_text['confirm_new_password']; ?>" required>
-        </div>
-
-        <br>
-
-        <button type="submit" class="btn btn-success"><?php print $admin_text['save']; ?></button>
+        <button type="submit" class="btn btn-success"><?= $admin_text['save']; ?></button>
 
       </form>
 
