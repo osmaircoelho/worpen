@@ -20,9 +20,11 @@ $update_user->bindValue(":id", $id);
 $update_user->bindValue(':plataform', $_SESSION['user_plataform']);
 $update_user->execute();
 
-
-if (isset($new_password) && isset($confirm_new_password)) {
+if (!$new_password && !$confirm_new_password) {
+  header("Location: ../../index.php?mod=admin&pg=edit_user&id={$id}&m=pass_error");
+} else {
   if ($new_password == $confirm_new_password) {
+    $new_password = $new_password."--".$INFO['hash'];
     $new_password = sha1($new_password);
     $update_sql = "UPDATE worpen_users SET password = :password WHERE id = :id AND plataform = :plataform";
     $update_user = $connect->prepare($update_sql);

@@ -8,7 +8,7 @@ include 'database.php';
 
 if (!$_POST['plataform']) { $plataform = ""; } else { $plataform = htmlspecialchars($_POST['plataform']); }
 if (!$_POST['user']) { $user = ""; } else { $user = htmlspecialchars($_POST['user']); }
-if (!$_POST['pass']) { $pass = ""; } else { $pass = addslashes($_POST['pass']); $pass = sha1($pass); }
+if (!$_POST['pass']) { $pass = ""; } else { $pass = addslashes($_POST['pass']); $pass = $pass."--".$INFO['hash']; $pass = sha1($pass); }
 
 if (!$user or !$pass) {
 

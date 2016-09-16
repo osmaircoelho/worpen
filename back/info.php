@@ -4,6 +4,7 @@
 $INFO['ip'] = $_SERVER['SERVER_ADDR'];
 $INFO['date'] = date("d/m/Y");
 $INFO['hour'] = date("H:i:s");
+$INFO['hash'] = "wpen-20-09-16";
 
 $worpen_selectdb_about = $connect->prepare("SELECT * FROM worpen_info WHERE id LIKE :id");
 $worpen_selectdb_about->bindValue(':id', $_SESSION['user_plataform']);
