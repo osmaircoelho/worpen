@@ -20,7 +20,7 @@ if (isset($_SESSION['login'])) { header("Location: index.php"); }
   <body>
 
     <header>
-      <img src="front/logo_login.png">
+      <img src="front/logo.svg">
     </header>
 
     <section>
