@@ -49,7 +49,6 @@
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <td><strong><?= $module_text['id']; ?></strong></td>
               <td><strong><?= $module_text['name']; ?></strong></td>
               <td><strong><?= $module_text['url']; ?></strong></td>
               <td><strong><?= $level_text['level']; ?></strong></td>

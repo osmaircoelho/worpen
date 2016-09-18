@@ -32,12 +32,11 @@ $select_db->execute();
 # Displays the results
 while ($result = $select_db->fetch(PDO::FETCH_ASSOC)) {
   echo "<tr>
-          <td>{$result['id']}</td>
           <td>{$result['name_menu']}</td>
           <td>{$result['url']}</td>
+          <td>{$result['badge']}</td>
           <td>{$result['access_level']}</td>
           <td>{$result['show']}</td>
-          <td>{$result['badge']}</td>
           <td>{$result['active']}</td>
           <td class=\"text-center\">
             <a href=\"?mod=admin&pg=edit_menu&id={$result['id']}\" class=\"btn btn-default\"><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a>

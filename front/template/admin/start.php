@@ -49,9 +49,9 @@
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <td><strong><?= $users_text['id']; ?></strong></td>
               <td><strong><?= $users_text['fullname']; ?></strong></td>
               <td><strong><?= $users_text['username']; ?></strong></td>
+              <td><strong><?= $users_text['email']; ?></strong></td>
               <td><strong><?= $level_text['level']; ?></strong></td>
               <td><strong><?= $users_text['date_create']; ?></strong></td>
               <td class="text-center"><strong><?= $admin_text['edit']; ?></strong></td>

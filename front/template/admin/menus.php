@@ -49,12 +49,11 @@
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <td><strong><?= $menus_text['id']; ?></strong></td>
               <td><strong><?= $menus_text['name_menu']; ?></strong></td>
               <td><strong><?= $menus_text['url']; ?></strong></td>
+              <td><strong><?= $menus_text['badge']; ?></strong></td>
               <td><strong><?= $level_text['level']; ?></strong></td>
               <td><strong><?= $menus_text['show']; ?></strong></td>
-              <td><strong><?= $menus_text['badge']; ?></strong></td>
               <td><strong><?= $menus_text['active']; ?></strong></td>
               <td class="text-center"><strong><?= $admin_text['edit']; ?></strong></td>
             </tr>

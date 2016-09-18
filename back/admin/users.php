@@ -32,9 +32,9 @@ $select_db->execute();
 # Displays the results
 while ($result = $select_db->fetch(PDO::FETCH_ASSOC)) {
   echo "<tr>
-          <td>{$result['id']}</td>
           <td>{$result['fullname']}</td>
           <td>{$result['username']}</td>
+          <td>{$result['email']}</td>
           <td>{$result['access_level']}</td>
           <td>{$result['date_create']}</td>
           <td class=\"text-center\">

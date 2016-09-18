@@ -43,15 +43,7 @@ $('#new').on('shown.bs.modal', function () {
             <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="<?= $users_text['confirmpassword']; ?>" required>
           </div>
 
-          <div class="form-group">
-            <label for="level"><?= $level_text['level']; ?></label>
-            <select class="form-control" name="level">
-              <option value="1">1 - <?= $level_text['administrator']; ?></option>
-              <option value="2">2 - <?= $level_text['manager']; ?></option>
-              <option value="3">3 - <?= $level_text['moderator']; ?></option>
-              <option value="4" selected>4 - <?= $level_text['user']; ?></option>
-            </select>
-          </div>
+          <?php include $PATH['module']."check_level.php"; ?>
 
           <br>
 

@@ -43,16 +43,7 @@
           <input type="text" class="form-control" id="username" name="username" placeholder="<?= $users_text['username']; ?>" value="<?= $edit_user_db['username']; ?>" required>
         </div>
 
-        <div class="form-group">
-          <label for="level"><?= $level_text['level']; ?></label>
-          <select class="form-control" name="level">
-            <option value="<?= $edit_user_db['access_level']; ?>" selected><?= $edit_user_db['access_level']; ?> - <?= $admin_text['selected']; ?></option>
-            <option value="1">1 - <?= $level_text['administrator']; ?></option>
-            <option value="2">2 - <?= $level_text['manager']; ?></option>
-            <option value="3">3 - <?= $level_text['moderator']; ?></option>
-            <option value="4">4 - <?= $level_text['user']; ?></option>
-          </select>
-        </div>
+        <?php include $PATH['module']."check_level.php"; ?>
 
         <hr>
 

@@ -32,7 +32,6 @@ $select_db->execute();
 # Displays the results
 while ($result = $select_db->fetch(PDO::FETCH_ASSOC)) {
   echo "<tr>
-          <td>{$result['id']}</td>
           <td>{$result['name']}</td>
           <td>{$result['url']}</td>
           <td>{$result['access_level']}</td>

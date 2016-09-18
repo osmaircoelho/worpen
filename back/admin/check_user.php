@@ -12,5 +12,5 @@ while ($result = $select_db->fetch(PDO::FETCH_ASSOC)) {
   $edit_user_db['email'] = $result['email'];
   $edit_user_db['username'] = $result['username'];
   $edit_user_db['date_create'] = $result['date_create'];
-  $edit_user_db['access_level'] = $result['access_level'];
+  $edit_level_db['access_level'] = $result['access_level'];
 }
