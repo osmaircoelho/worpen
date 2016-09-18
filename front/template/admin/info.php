@@ -2,7 +2,7 @@
 
   <div class="row">
 
-    <div class="col-md-2">
+    <div class="col-sm-2">
       <br>
       <a href="?mod=admin" class="btn btn-block btn-transparent"><?= $admin_text['users']; ?></a>
       <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?= $admin_text['records']; ?></a>
@@ -11,10 +11,10 @@
       <a href="?mod=admin&pg=info" class="btn btn-block btn-blue-3"><?= $admin_text['info']; ?></a>
     </div>
 
-    <div class="col-md-10">
+    <div class="col-sm-10">
 
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-sm-12">
           <h2><?= $info_text['title']; ?></h2>
         </div>
       </div>
@@ -59,6 +59,23 @@
           <label for="password_mail"><?= $info_text['password_mail']; ?></label>
           <input type="password" class="form-control" id="password_mail" name="password_mail" value="<?= $INFO_MAIL['password']; ?>" required>
         </div>
+
+        <?php
+          if (!$_GET['m']) { $message = ""; } else { $message = addslashes($_GET['m']); }
+          switch ($message) {
+            case 'ok_info':
+              echo "<p class=\"text-green-3\">{$info_text['info_updated']}</p>";
+              break;
+            
+            case 'error_info':
+              echo "<p class=\"text-red-3\">{$info_text['info_updated_error']}</p>";
+              break;
+            
+            default:
+              echo "<br>";
+              break;
+          }
+        ?>
 
         <button type="submit" class="btn btn-success"><?= $admin_text['save']; ?></button>
 

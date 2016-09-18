@@ -2,6 +2,8 @@
 
 function worpen_head() {
   // print "<link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\">";
+  $MODULE_CSS_INCLUDE = $PATH['template'].$MODULE_GET."/style.css";
+  print "<link href=\"{$MODULE_CSS_INCLUDE}\" rel=\"stylesheet\" type=\"text/css\">";
 }
 
 function worpen_logo() {
@@ -20,5 +22,5 @@ Do not change the codes below, please!
 
 function worpen_logoff() {
   session_destroy();
-  header("Location: login.php");
+  header("Location: {$INFO['login_page']}");
 }

@@ -4,7 +4,7 @@
 
   <div class="row">
 
-    <div class="col-md-2">
+    <div class="col-sm-2">
       <br>
       <a href="?mod=admin" class="btn btn-block btn-blue-3"><?= $admin_text['users']; ?></a>
       <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?= $admin_text['records']; ?></a>
@@ -12,13 +12,13 @@
       <a href="?mod=admin&pg=info" class="btn btn-block btn-transparent"><?= $admin_text['info']; ?></a>
     </div>
 
-    <div class="col-md-10">
+    <div class="col-sm-10">
 
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-sm-8">
           <h2><?= $users_text['title_edit']; ?></h2>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-4">
           <br>
           <p class="text-right"><a href="?mod=admin" class="btn btn-warning"><i class="fa fa-arrow-circle-o-left"></i> &nbsp; <?= $admin_text['back']; ?></a></p>
         </div>

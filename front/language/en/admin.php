@@ -113,5 +113,7 @@ $info_text = array(
   "server_mail" => "Mail Server",
   "port_mail" => "Email server port",
   "user_mail" => "User email",
-  "password_mail" => "Password email"
+  "password_mail" => "Password email",
+  "info_updated" => "Updated successfully!",
+  "info_updated_error" => "An error occurred, check the data!"
 );

@@ -1,5 +1,8 @@
 <?php
 include '../config.php';
+
+if (!$_SESSION['login']) { header("Location: ../{$INFO['login_page']}"); } /* Delete after setting $INFO['url'] to url */
+
 if (!$_GET['id']) { $id = ""; } else { $id = htmlspecialchars($_GET['id']); }
 
 $select_menu_notif = $connect->prepare("SELECT * FROM worpen_notification WHERE active LIKE :active AND id LIKE :id AND plataform LIKE :plataform");

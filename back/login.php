@@ -12,7 +12,7 @@ if (!$_POST['pass']) { $pass = ""; } else { $pass = addslashes($_POST['pass']); 
 
 if (!$user or !$pass) {
 
-  header("Location: ../login.php?m=fill");
+  header("Location: ../{$INFO['login_page']}?m=fill");
 
 } else {
 
@@ -55,7 +55,7 @@ if (!$user or !$pass) {
 
     header("Location: ../index.php");
   } else {
-    header("Location: ../login.php?m=error");
+    header("Location: ../{$INFO['login_page']}?m=error");
   }
 
 }

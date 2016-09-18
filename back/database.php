@@ -1,4 +1,5 @@
 <?php
+
 # Database
 $worpen_database_type = "mysql";
 $worpen_database_host = "localhost";
