@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `worpen_info` (
   `user_mail` text NOT NULL,
   `password_mail` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8 AUTO_INCREMENT=2 ;
 
 INSERT INTO `worpen_info` (`id`, `sitename`, `language`, `modstart`, `server_mail`, `port_mail`, `user_mail`, `password_mail`) VALUES
 (1, 'Worpen', 'en', 'home', 'smtp.site.com', '587', 'user@site.com', 'Password');
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `worpen_log` (
   `ip` text NOT NULL,
   `plataform` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `worpen_menu` (
   `badge` text NOT NULL,
   `plataform` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8 AUTO_INCREMENT=2 ;
 
 INSERT INTO `worpen_menu` (`id`, `url`, `name_menu`, `access_level`, `date_create`, `active`, `display`, `badge`, `plataform`) VALUES
 (2, 'test', 'Bazinga', '1', 'today', 'yes', 'yes', 'New', '1');
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `worpen_module` (
   `active` text NOT NULL,
   `plataform` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8 AUTO_INCREMENT=2 ;
 
 INSERT INTO `worpen_module` (`id`, `name`, `url`, `access_level`, `date_create`, `active`, `plataform`) VALUES
 (2, 'Test', 'test', '1', 'today', 'yes', '1');
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `worpen_notification` (
   `active` text NOT NULL,
   `plataform` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8 AUTO_INCREMENT=2 ;
 
 INSERT INTO `worpen_notification` (`id`, `name`, `url`, `user`, `blank`, `active`, `plataform`) VALUES
 (1, 'Welcome', 'https://worpen.github.io/', 'admin', 'yes', 'yes', '1');
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `worpen_users` (
   `access_level` text NOT NULL,
   `plataform` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8 AUTO_INCREMENT=2 ;
 
 INSERT INTO `worpen_users` (`id`, `username`, `password`, `fullname`, `email`, `date_create`, `access_level`, `plataform`) VALUES
 (1, 'admin', '4bff1125627ba61be147347758403f5690247eca', 'Administrator', 'test@test', 'First Day', '1', '1');
