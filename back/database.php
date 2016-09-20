@@ -3,9 +3,9 @@
 # Database
 $worpen_database_type = "mysql";
 $worpen_database_host = "localhost";
-$worpen_database_name = "gmasson_worpen";
-$worpen_database_user = "gmasson_worpen";
-$worpen_database_pass = "teste123";
+$worpen_database_name = "database";
+$worpen_database_user = "root";
+$worpen_database_pass = "root";
 
 /* 
 ----------------------------------------
