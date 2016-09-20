@@ -1,13 +1,16 @@
 <?php
 session_start();
 
+// System Information
+include 'back/sys_info.php';
+
 // Validation
-if (!$_SESSION['login']) { header("Location: {$INFO['login_page']}"); }
+if (!$_SESSION['login']) { header("Location: {$INFO_LOGIN_PAGE}"); }
 
 // Database
 include 'back/database.php';
 
-// Database
+// Information
 include 'back/info.php';
 
 // Routes

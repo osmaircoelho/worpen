@@ -13,16 +13,16 @@ $('#new').on('shown.bs.modal', function () {
 
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="newLabel"><?= $module_text['title_new']; ?></h4>
+          <h4 class="modal-title" id="newLabel"><?= $modules_text['title_new']; ?></h4>
         </div>
 
         <div class="modal-body">
 
           <div class="form-group">
-            <label for="name"><?= $module_text['name']; ?></label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="<?= $module_text['name']; ?>" required>
+            <label for="name"><?= $modules_text['name']; ?></label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="<?= $modules_text['name']; ?>" required>
           </div>
-          <p><small><?= $module_text['instructions']; ?></small></p>
+          <p><small><?= $modules_text['instructions']; ?></small></p>
 
           <br>
 

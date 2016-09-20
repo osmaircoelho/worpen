@@ -1,4 +1,8 @@
-<?php include $PATH['module']."check_user.php"; ?>
+<?php
+include $PATH['module']."check_user.php";
+include 'delete_user.php';
+?>
+
 
 <section>
 
@@ -9,6 +13,7 @@
       <a href="?mod=admin" class="btn btn-block btn-blue-3"><?= $admin_text['users']; ?></a>
       <a href="?mod=admin&pg=log" class="btn btn-block btn-transparent"><?= $admin_text['records']; ?></a>
       <a href="?mod=admin&pg=modules" class="btn btn-block btn-transparent"><?= $admin_text['modules']; ?></a>
+      <a href="?mod=admin&pg=menus" class="btn btn-block btn-transparent"><?= $admin_text['menus']; ?></a>
       <a href="?mod=admin&pg=info" class="btn btn-block btn-transparent"><?= $admin_text['info']; ?></a>
     </div>
 
@@ -65,15 +70,15 @@
           if (!$_GET['m']) { $message = ""; } else { $message = addslashes($_GET['m']); }
           switch ($message) {
             case 'ok_info':
-              echo "<p class=\"text-green-3\">{$users_text['user_updated']}</p>";
+              echo "<p class=\"text-green-3\">{$users_text['updated']}</p>";
               break;
             
             case 'error_info':
-              echo "<p class=\"text-red-3\">{$users_text['user_updated_error']}</p>";
+              echo "<p class=\"text-red-3\">{$users_text['updated_error']}</p>";
               break;
             
             case 'pass_error':
-              echo "<p class=\"text-red-3\">{$users_text['user_updated_pass_error']}</p>";
+              echo "<p class=\"text-red-3\">{$users_text['updated_pass_error']}</p>";
               break;
             
             default:
@@ -83,6 +88,9 @@
         ?>
 
         <button type="submit" class="btn btn-success"><?= $admin_text['save']; ?></button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete" id="#deletebtn">
+          <?= $admin_text['delete']; ?>
+        </button>
 
       </form>
 

@@ -21,7 +21,7 @@ $update_user->bindValue(":server_mail", $server_mail);
 $update_user->bindValue(":port_mail", $port_mail);
 $update_user->bindValue(":user_mail", $user_mail);
 $update_user->bindValue(":password_mail", $password_mail);
-$update_user->bindValue(':plataform', $_SESSION['user_plataform']);
+$update_user->bindValue(':plataform', $INFO_USER['plataform']);
 $update_user->execute();
 
 header("Location: ../../index.php?mod=admin&pg=info&m=ok_info");

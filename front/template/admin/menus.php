@@ -53,7 +53,7 @@
               <td><strong><?= $menus_text['url']; ?></strong></td>
               <td><strong><?= $menus_text['badge']; ?></strong></td>
               <td><strong><?= $level_text['level']; ?></strong></td>
-              <td><strong><?= $menus_text['show']; ?></strong></td>
+              <td><strong><?= $menus_text['display']; ?></strong></td>
               <td><strong><?= $menus_text['active']; ?></strong></td>
               <td class="text-center"><strong><?= $admin_text['edit']; ?></strong></td>
             </tr>

@@ -8,6 +8,7 @@ if (!$_GET['pg']) { $PAGE_GET = "start"; } else { $PAGE_GET = addslashes($_GET['
 
 // Include from modules
 $PATH['module'] = $FOLDERS['back'].$MODULE_GET."/";
+$PATH['module_front'] = $PATH['template'].$MODULE_GET."/";
 
 // Include the path
 $CURRENT_MODULE = $PATH['template'].$MODULE_GET."/".$PAGE_GET.".php";
@@ -18,7 +19,7 @@ if (file_exists($CURRENT_MODULE)) {
   $PAGE_CONTENT = $CURRENT_MODULE;
 
   // checks if there is any related Include
-  $INCLUDES_MODULE = $PATH['module']."/include.php";
+  $INCLUDES_MODULE = $PATH['module']."include.php";
   if (file_exists($INCLUDES_MODULE)) { include $INCLUDES_MODULE; }
 
   // checks if there is any related Language

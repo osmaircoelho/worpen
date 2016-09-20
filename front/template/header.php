@@ -10,7 +10,14 @@
     <link href="<?= $PATH['template']; ?>_files/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="<?= $PATH['template']; ?>_files/css/anie.css" rel="stylesheet" type="text/css">
     <link href="<?= $PATH['template']; ?>_files/css/style.css" rel="stylesheet" type="text/css">
-    <?php worpen_head(); ?>
+    <?php 
+      worpen_head();
+
+      $INCLUDES_MODULE_CSS = $PATH['module_front']."style.css";
+      if (file_exists($INCLUDES_MODULE_CSS)) {
+        print "<link href=\"{$INCLUDES_MODULE_CSS}\" rel=\"stylesheet\" type=\"text/css\">";
+      }
+    ?>
   </head>
   <body>
 
@@ -34,9 +41,9 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['user_username']; ?> <strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <?php
-                  if ($_SESSION['access_level'] == 1) { echo "<li><a href=\"?mod=admin\">{$header_text['admin']}</a></li>"; }
+                  if ($INFO_USER['access_level'] == '1') { echo "<li><a href=\"?mod=admin\">{$header_text['admin']}</a></li>"; }
                 ?>
-                <!-- <li><a href=\"logoff.php\"><?php echo $header_text['settings']; ?></a></li> -->
+                <!-- <li><a href=\"settings.php\"><?php echo $header_text['settings']; ?></a></li> -->
                 <li><a href="logoff.php"><?php echo $header_text['logoff']; ?></a></li>
               </ul>
             </li>

@@ -17,13 +17,13 @@
 
       <div class="row">
         <div class="col-sm-8">
-          <h2><?= $module_text['title']; ?></h2>
+          <h2><?= $modules_text['title']; ?></h2>
         </div>
         <div class="col-sm-4">
           <br>
           <p class="text-right">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#new" id="#newbtn">
-              <?= $module_text['new']; ?>
+              <?= $modules_text['new']; ?>
             </button>
           </p>
         </div>
@@ -38,9 +38,9 @@
             <div class="input-group">
               <input type="hidden" name="mod" value="admin">
               <input type="hidden" name="pg" value="modules">
-              <input type="text" class="form-control" name="search" placeholder="<?= $module_text['input_search']; ?>">
+              <input type="text" class="form-control" name="search" placeholder="<?= $modules_text['input_search']; ?>">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="submit"><?= $module_text['button_search']; ?></button>
+                <button class="btn btn-default" type="submit"><?= $modules_text['button_search']; ?></button>
               </span>
             </div>
           </form>
@@ -49,11 +49,11 @@
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <td><strong><?= $module_text['name']; ?></strong></td>
-              <td><strong><?= $module_text['url']; ?></strong></td>
+              <td><strong><?= $modules_text['name']; ?></strong></td>
+              <td><strong><?= $modules_text['url']; ?></strong></td>
               <td><strong><?= $level_text['level']; ?></strong></td>
-              <td><strong><?= $module_text['date_create']; ?></strong></td>
-              <td><strong><?= $module_text['active']; ?></strong></td>
+              <td><strong><?= $modules_text['date_create']; ?></strong></td>
+              <td><strong><?= $modules_text['active']; ?></strong></td>
               <td class="text-center"><strong><?= $admin_text['edit']; ?></strong></td>
             </tr>
           </thead>

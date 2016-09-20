@@ -24,7 +24,7 @@ if ($count_results == 1) {
 }
 
 # Search the Database
-$select_db = $connect->prepare("SELECT * FROM worpen_users WHERE (fullname LIKE :search OR username LIKE :search OR date_create LIKE :search) AND plataform LIKE :plataform ORDER BY id LIMIT {$number_result_page}, {$results_for_page}");
+$select_db = $connect->prepare("SELECT * FROM worpen_users WHERE (fullname LIKE :search OR username LIKE :search OR date_create LIKE :search) AND plataform LIKE :plataform ORDER BY id DESC LIMIT {$number_result_page}, {$results_for_page}");
 $select_db->bindValue(':search', "%{$search_user}%");
 $select_db->bindValue(':plataform', $_SESSION['user_plataform']);
 $select_db->execute();

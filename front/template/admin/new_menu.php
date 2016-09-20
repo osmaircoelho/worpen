@@ -31,8 +31,8 @@ $('#new').on('shown.bs.modal', function () {
           <?php include $PATH['module']."check_level.php"; ?>
 
           <div class="form-group">
-            <label for="show"><?= $menus_text['show']; ?></label>
-            <select class="form-control" name="show">
+            <label for="display"><?= $menus_text['display']; ?></label>
+            <select class="form-control" name="display">
               <option value="yes"><?= $menus_text['yes']; ?></option>
               <option value="no"><?= $menus_text['no']; ?></option>
             </select>

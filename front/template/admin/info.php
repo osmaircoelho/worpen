@@ -64,11 +64,11 @@
           if (!$_GET['m']) { $message = ""; } else { $message = addslashes($_GET['m']); }
           switch ($message) {
             case 'ok_info':
-              echo "<p class=\"text-green-3\">{$info_text['info_updated']}</p>";
+              echo "<p class=\"text-green-3\">{$info_text['updated']}</p>";
               break;
             
             case 'error_info':
-              echo "<p class=\"text-red-3\">{$info_text['info_updated_error']}</p>";
+              echo "<p class=\"text-red-3\">{$info_text['updated_error']}</p>";
               break;
             
             default:

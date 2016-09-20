@@ -17,13 +17,13 @@
 
       <div class="row">
         <div class="col-sm-8">
-          <h2><?= $log_text['title']; ?></h2>
+          <h2><?= $logs_text['title']; ?></h2>
         </div>
         <div class="col-sm-4">
           <br>
           <p class="text-right">
             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#clearlog" id="#clearlogbtn">
-              <?= $log_text['del']; ?>
+              <?= $logs_text['del']; ?>
             </button>
           </p>
         </div>
@@ -38,9 +38,9 @@
             <div class="input-group">
               <input type="hidden" name="mod" value="admin">
               <input type="hidden" name="pg" value="log">
-              <input type="text" class="form-control" name="search" placeholder="<?= $log_text['input_search']; ?>">
+              <input type="text" class="form-control" name="search" placeholder="<?= $logs_text['input_search']; ?>">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="submit"><?= $log_text['button_search']; ?></button>
+                <button class="btn btn-default" type="submit"><?= $logs_text['button_search']; ?></button>
               </span>
             </div>
           </form>
@@ -49,10 +49,10 @@
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <td><strong><?= $log_text['id']; ?></strong></td>
-              <td><strong><?= $log_text['username']; ?></strong></td>
-              <td><strong><?= $log_text['date']; ?></strong></td>
-              <td><strong><?= $log_text['ip']; ?></strong></td>
+              <td><strong><?= $logs_text['id']; ?></strong></td>
+              <td><strong><?= $logs_text['username']; ?></strong></td>
+              <td><strong><?= $logs_text['date']; ?></strong></td>
+              <td><strong><?= $logs_text['ip']; ?></strong></td>
             </tr>
           </thead>
           <tbody>

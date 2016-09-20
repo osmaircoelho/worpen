@@ -10,14 +10,14 @@ $('#clearlog').on('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="clearlogLabel"><?= $log_text['modal_title']; ?></h4>
+        <h4 class="modal-title" id="clearlogLabel"><?= $logs_text['modal_title']; ?></h4>
       </div>
       <div class="modal-body">
-        <?= $log_text['modal_body']; ?>
+        <?= $logs_text['modal_body']; ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal"><?= $log_text['modal_no']; ?></button>
-        <a href="<?= $PATH['module']; ?>clear_log.php" class="btn btn-danger"><?= $log_text['modal_yes']; ?></a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?= $logs_text['modal_no']; ?></button>
+        <a href="<?= $PATH['module']; ?>clear_log.php" class="btn btn-danger"><?= $logs_text['modal_yes']; ?></a>
       </div>
     </div>
   </div>

@@ -24,7 +24,7 @@ if ($count_results == 1) {
 }
 
 # Search the Database
-$select_db = $connect->prepare("SELECT * FROM worpen_menu WHERE (name_menu LIKE :search OR url LIKE :search) AND plataform LIKE :plataform ORDER BY id LIMIT {$number_result_page}, {$results_for_page}");
+$select_db = $connect->prepare("SELECT * FROM worpen_menu WHERE (name_menu LIKE :search OR url LIKE :search) AND plataform LIKE :plataform ORDER BY id DESC LIMIT {$number_result_page}, {$results_for_page}");
 $select_db->bindValue(':search', "%{$search_user}%");
 $select_db->bindValue(':plataform', $_SESSION['user_plataform']);
 $select_db->execute();
@@ -36,7 +36,7 @@ while ($result = $select_db->fetch(PDO::FETCH_ASSOC)) {
           <td>{$result['url']}</td>
           <td>{$result['badge']}</td>
           <td>{$result['access_level']}</td>
-          <td>{$result['show']}</td>
+          <td>{$result['display']}</td>
           <td>{$result['active']}</td>
           <td class=\"text-center\">
             <a href=\"?mod=admin&pg=edit_menu&id={$result['id']}\" class=\"btn btn-default\"><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a>

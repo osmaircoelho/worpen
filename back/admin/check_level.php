@@ -1,21 +1,19 @@
 
 <div class="form-group">
   <label for="level"><?= $level_text['level']; ?></label>
-  <select class="form-control" name="level">
+  <select class="form-control" name="level" id="level">
     <?php
-      $Leve_select['1'] = ""; $Leve_select['2'] = ""; $Leve_select['3'] = ""; $Leve_select['4'] = "";
-
-      if (isset($edit_level_db['access_level'])) {
-        $Leve_select_number = $edit_level_db['access_level']; 
-        $Leve_select['{$Leve_select_number}'] = "selected";
+      $Level_select['1'] = ""; $Level_select['2'] = ""; $Level_select['3'] = ""; $Level_select['4'] = "";
+      if (!$edit_level_db['access_level']) {
+        $Level_select['4'] = "selected";
       } else {
-        $Leve_select['4'] = "selected";
+        $Level_select_number = $edit_level_db['access_level']; 
+        $Level_select[$Level_select_number] = "selected";
       }
     ?>
-
-    <option value="1" <?= $Leve_select['1']; ?>><?= $level_text['administrator']; ?></option>
-    <option value="2" <?= $Leve_select['2']; ?>><?= $level_text['manager']; ?></option>
-    <option value="3" <?= $Leve_select['3']; ?>><?= $level_text['moderator']; ?></option>
-    <option value="4" <?= $Leve_select['4']; ?>><?= $level_text['user']; ?></option>
+    <option value="1" <?= $Level_select['1']; ?>><?= $level_text['administrator']; ?></option>
+    <option value="2" <?= $Level_select['2']; ?>><?= $level_text['manager']; ?></option>
+    <option value="3" <?= $Level_select['3']; ?>><?= $level_text['moderator']; ?></option>
+    <option value="4" <?= $Level_select['4']; ?>><?= $level_text['user']; ?></option>
   </select>
 </div>

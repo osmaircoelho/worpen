@@ -2,6 +2,7 @@
 $admin_text = array(
   "save" => "<span class=\"glyphicon glyphicon-floppy-disk\"></span> &nbsp; Save",
   "cancel" => "<span class=\"glyphicon glyphicon-remove\"></span> &nbsp; Cancel",
+  "delete" => "<span class=\"glyphicon glyphicon-trash\"></span> &nbsp; Delete",
   "install" => "<span class=\"glyphicon glyphicon-saved\"></span> &nbsp; Install",
   "back" => "<span class=\"glyphicon glyphicon-hand-left\"></span> &nbsp; Go back",
   "users" => "Users",
@@ -10,7 +11,7 @@ $admin_text = array(
   "menus" => "Menus",
   "info" => "Details",
   "edit" => "Edit",
-  "selected" => "[Selected]"
+  "selected" => "Selected"
 );
 
 /* --------- */
@@ -42,15 +43,19 @@ $users_text = array(
   "new_password" => "New Password",
   "confirm_new_password" => "Confirm New Password",
   "info_new_password" => "Fill in the fields below only if changing the current password.",
-  "user_updated" => "User updated successfully!",
-  "user_updated_error" => "An error occurred, check the data!",
-  "user_updated_pass_error" => "The password fields do not match.",
-  "date_create" => "Register"
+  "updated" => "User updated successfully!",
+  "updated_error" => "An error occurred, check the data!",
+  "updated_pass_error" => "The password fields do not match.",
+  "date_create" => "Register",
+  "modal_title" => "Do you want to delete user?",
+  "modal_body" => "This action is irreversible, are you sure?",
+  "modal_no" => "No",
+  "modal_yes" => "Yes"
 );
 
 /* --------- */
 
-$module_text = array(
+$modules_text = array(
   "title" => "Modules",
   "title_new" => "New Module",
   "title_edit" => "Edit Module",
@@ -63,7 +68,15 @@ $module_text = array(
   "name" => "Name Module",
   "url" => "URL",
   "date_create" => "Date Create",
-  "active" => "Active"
+  "active" => "Active",
+  "yes" => "Yes",
+  "no" => "No",
+  "updated" => "Updated successfully!",
+  "updated_error" => "An error occurred, check the data!",
+  "modal_title" => "Do you want to delete module?",
+  "modal_body" => "This action is irreversible, are you sure?",
+  "modal_no" => "No",
+  "modal_yes" => "Yes"
 );
 
 /* --------- */
@@ -78,16 +91,22 @@ $menus_text = array(
   "id" => "ID",
   "name_menu" => "Name Menu",
   "url" => "URL",
-  "show" => "Show Menu",
+  "display" => "Show Menu",
   "badge" => "Badge",
   "active" => "Active",
   "yes" => "Yes",
-  "no" => "No"
+  "no" => "No",
+  "updated" => "Updated successfully!",
+  "updated_error" => "An error occurred, check the data!",
+  "modal_title" => "Do you want to delete menu?",
+  "modal_body" => "This action is irreversible, are you sure?",
+  "modal_no" => "No",
+  "modal_yes" => "Yes"
 );
 
 /* --------- */
 
-$log_text = array(
+$logs_text = array(
   "title" => "Log",
   "del" => "<span class=\"glyphicon glyphicon-trash\"></span> &nbsp; Clear Records",
   "input_search" => "Search for Username or Date",
@@ -114,6 +133,6 @@ $info_text = array(
   "port_mail" => "Email server port",
   "user_mail" => "User email",
   "password_mail" => "Password email",
-  "info_updated" => "Updated successfully!",
-  "info_updated_error" => "An error occurred, check the data!"
+  "updated" => "Updated successfully!",
+  "updated_error" => "An error occurred, check the data!"
 );
